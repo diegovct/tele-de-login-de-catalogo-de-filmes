@@ -1,0 +1,58 @@
+{
+    "routes": [
+      {
+        "path": "/login",
+        "method": "POST",
+        "description": "Rota para efetuar login de usuário",
+        "parameters": [
+          {
+            "name": "email",
+            "type": "string",
+            "description": "O email ou número de telefone do usuário"
+          },
+          {
+            "name": "password",
+            "type": "string",
+            "description": "A senha do usuário"
+          }
+        ],
+        "response": {
+          "success": {
+            "type": "boolean",
+            "description": "Indica se o login foi bem-sucedido"
+          },
+          "message": {
+            "type": "string",
+            "description": "Mensagem de retorno, como 'Login efetuado com sucesso!' ou 'Email ou senha incorretos.'"
+          }
+        }
+      },
+      {
+        "path": "/register",
+        "method": "POST",
+        "description": "Rota para registrar um novo usuário",
+        "parameters": [
+          {
+            "name": "email",
+            "type": "string",
+            "description": "O email do novo usuário"
+          },
+          {
+            "name": "password",
+            "type": "string",
+            "description": "A senha do novo usuário"
+          }
+        ],
+        "response": {
+          "success": {
+            "type": "boolean",
+            "description": "Indica se o registro foi bem-sucedido"
+          },
+          "message": {
+            "type": "string",
+            "description": "Mensagem de retorno, como 'Registro efetuado com sucesso!' ou 'Erro ao registrar usuário. Email já cadastrado?'"
+          }
+        }
+      }
+    ]
+  }
